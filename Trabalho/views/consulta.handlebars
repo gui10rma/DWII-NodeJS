@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+            <div class="container-fluid bg-primary p-3">
+                <a class="navbar-brand text-white" href="#">SISTEMA WEB</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item ">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Cadastrar</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link text-white text-active" href="./buscar">Consultar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div>
+    </div>
+     <form action="/cadastrar" method="POST" class="bg-white px-4 py-3"> 
+    <div class="container text-center">
+        <div class="row align-items-start">
+             <div class="col">
+            Nome
+        </div>
+         <div class="col">
+            telefone
+        </div>
+         <div class="col">
+            origem
+        </div>
+         <div class="col">
+            Data de contato
+        </div>
+         <div class="col">
+            observacao
+        </div>
+        {{#each post}}
+            {{#dataValues}}
+            <div class="row">
+                <div class="col">
+                    {{nome}}
+                </div>
+                <div class="col">
+                    {{telefone}}
+                </div>
+                <div class="col">
+                    {{origem}}
+                </div>
+                <div class="col">
+                    {{data_contato}}
+                </div>
+                <div class="col">
+                    {{observacao}}
+                </div>
+            </div>
+            {{/dataValues}}
+        {{/each}} 
+          
+            </form>
+        </div>
+    </div>
