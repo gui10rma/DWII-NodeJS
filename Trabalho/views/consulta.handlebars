@@ -39,6 +39,9 @@
          <div class="col">
             observacao
         </div>
+         <div class="col">
+            Ações
+        </div>
         {{#each post}}
             {{#dataValues}}
             <div class="row">
@@ -57,10 +60,13 @@
                 <div class="col">
                     {{observacao}}
                 </div>
+                <div class="col">
+                <a href = "/excluir/:ID{{ID}}"><button type="button" class="btn btn-danger btn-sm">Excluir</button></a>
+                </div>
             </div>
+            
             {{/dataValues}}
         {{/each}} 
-          
             </form>
         </div>
     </div>
