@@ -43,3 +43,14 @@ app.get("/buscar", function(req, res){
 app.listen(8081, function(){
     console.log("Servidor ativo")
 })
+
+app.get("/excluir/:id", function(req,res){
+    post.destroy({
+        where: {'id': req.params.id},
+        force: true
+      }).then(function(){
+        res.redirect("/consulta")
+    }).catch(function(erro){
+        console.log("Erro ao carregar dados do banco: " +erro)
+    })
+})
